@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Acción para la tabla consolidada -->
+        <record id="action_consolidated_table" model="ir.actions.act_window">
+            <field name="name">Consolidated Table</field>
+            <field name="res_model">consolidated.table</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Acción para abrir el dashboard -->
+        <record id="action_dashboard_layout" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">consolidated.table</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_dashboard_layout"/>
+            <field name="target">current</field>
+        </record>
+
+        <!-- Menú principal -->
+        <menuitem id="menu_consolidated_root" name="Consolidated Data" sequence="20"/>
+
+        <!-- Menú para la tabla consolidada -->
+        <menuitem id="menu_consolidated_table" name="Consolidated Table" 
+                  parent="menu_consolidated_root" action="action_consolidated_table"/>
+
+        <!-- Menú para el dashboard -->
+        <menuitem id="menu_dashboard_view" name="Dashboard View" 
+                  parent="menu_consolidated_root" action="action_dashboard_layout"/>
+
+        <!-- Vista de lista para la tabla consolidada -->
+        <record id="view_consolidated_table_tree" model="ir.ui.view">
+            <field name="name">consolidated.table.tree</field>
+            <field name="model">consolidated.table</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="student_id"/>
+                    <field name="payment_status"/>
+                    <field name="price"/>
+                    <field name="departments"/>
+                    <field name="career"/>
+                    <field name="trimester"/>
+                    <field name="gender"/>
+                    <field name="active"/>
+                    <field name="room"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de formulario para la tabla consolidada -->
+        <record id="view_consolidated_table_form" model="ir.ui.view">
+            <field name="name">consolidated.table.form</field>
+            <field name="model">consolidated.table</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="contract_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vista para el dashboard -->
+         <record id="view_dashboard_layout" model="ir.ui.view">
+            <field name="name">dashboard.layout</field>
+            <field name="model">consolidated.table</field>
+            <field name="arch" type="xml">
+                <form string="Dashboard">
+                    <sheet>
+                        
+                            
+                            <div class="row dashboard-section">
+                                 <div class="col-12">
+                                    <h3 class="section-title">General Summary of Contracts and Payments</h3>
+                                </div>
+                                <!-- KPI 1: Contratos Generados -->
+                                <div class="col-4">
+                                    <div class="kpi-card">
+                                        <h4>Contracts Generated</h4>
+                                        <p id="contractGenerated">
+                                            <field name="total_contracts"/>
+                                        </p> 
+                                    </div>
+                                </div>
+
+                                <!-- KPI 2: Total de Pagos -->
+                                <div class="col-4">
+                                    <div class="kpi-card">
+                                        <h4>Total revenue</h4>
+                                        <p id="totalPayments">
+                                            $<field name="total_payments"/>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- KPI 3: Contratos Activos -->
+                                <div class="col-4">
+                                    <div class="kpi-card">
+                                        <h4>Active Contracts</h4>
+                                        <p id="activeContracts">
+                                            12<!-- <field name="active_contracts"/> -->
+                                        </p> 
+                                    </div>
+                                </div>
+
+
+                                 <div class="col-4">
+                                    <h4>Distribution of contracts by departments</h4>
+                                    <canvas id="distributionContractsByDepartmentsChart" width="400" height="400"></canvas>
+                                </div>
+
+                                 <div class="col-4">
+                                    <h4>Payments status</h4>
+                                    <canvas id="paymentStatusChart" width="400" height="400"></canvas>
+                                </div>
+
+                                <div class="col-4">
+                                    <h4>Distribution of contracts by career</h4>
+                                    <canvas id="distributionContractsByCareerChart" width="400" height="400"></canvas>
+                                </div>
+
+                                <!-- <div class="col-4">
+                                    <h4>Distribution of contracts by subjects</h4>
+                                    <canvas id="distributionContractsBySubjectsChart" width="400" height="400"></canvas>
+                                </div> -->
+                            </div>
+
+                         
+                            <!-- </div> -->
+
+                            <!-- Sección 2: Distribución de Materias y Profesores -->
+                            <div class="row dashboard-section">
+                                <div class="col-12">
+                                    <h3 class="section-title">Distribution of subjects and professors</h3>
+                                </div>
+
+                                
+                                <div class="col-4">
+                                    <div class="kpi-card">
+                                        <h4>Total professors</h4>
+                                        <p id="TotalProfessors">
+                                            8<!-- <field name="total_professors"/> -->
+                                        </p> 
+                                    </div>
+                                </div>
+
+                            
+                                <div class="col-4">
+                                    <div class="kpi-card">
+                                        <h4>Total Subjects</h4>
+                                        <p id="totalPayments">
+                                            5<!-- <field name="total_subjects"/> -->
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-3">
+                                    <div class="kpi-card">
+                                        <h4>Average hours per subject</h4>
+                                        <p id="activeContracts">
+                                            36.50%<!-- <field name="active_contracts"/> -->
+                                        </p> 
+                                    </div>
+                                </div>
+
+
+
+                                <div class="col-6">
+                                    <h4>Subjects per student</h4>
+                                    <canvas id="subjectsByStudentChart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="col-6">
+                                    <h4>Subjects per profesor</h4>
+                                    <canvas id="subjectsByProfessorChart" width="400" height="400"></canvas>
+                                </div>
+                               
+                            </div>
+
+                            <!-- Sección 3: Costos y Pagos -->
+                            <div class="row dashboard-section">
+                                <div class="col-12">
+                                    <h3 class="section-title">Students</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h4>Gender distribution</h4>
+                                    <canvas id="genderChart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="col-4">
+                                    <h4>Age distribution</h4>
+                                    <canvas id="ageChart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="col-4">
+                                    <h4>Trimester distribution</h4>
+                                    <canvas id="trimesterChart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Sección 4: Rendimiento de los Profesores -->
+                            <!-- <div class="row dashboard-section">
+                                <div class="col-12">
+                                    <h3 class="section-title">Rendimiento de los Profesores</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h4>Horas Asignadas por Profesor</h4>
+                                    <canvas id="hoursAssignedChart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="col-4">
+                                    <h4>Calificación Promedio de Profesores</h4>
+                                    <canvas id="teacherRatingChart" width="400" height="400"></canvas>
+                                </div>
+                            </div> -->
+
+                            <!-- Sección 5: Análisis de Matrículas y Cancelaciones -->
+                            <!-- <div class="row dashboard-section">
+                                <div class="col-12">
+                                    <h3 class="section-title">Análisis de Matrículas y Cancelaciones</h3>
+                                </div>
+                                <div class="col-4">
+                                    <h4>Matriculaciones vs Cancelaciones</h4>
+                                    <canvas id="registrationsVsCancellationsChart" width="400" height="400"></canvas>
+                                </div>
+                                <div class="col-4">
+                                    <h4>Evolución de Matrículas</h4>
+                                    <canvas id="evolutionRegistrationsChart" width="400" height="400"></canvas>
+                                </div>
+                            </div> -->
+                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <!-- <template id="dashboard_embed_template" name="Dashboard Embed">
+            <t t-call="website.layout">
+                <div class="container">
+                    <iframe t-att-src="'http://localhost:8069' + dashboard_url" width="100%" height="800px" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+            </t>
+        </template> -->
+    </data>
+</odoo>

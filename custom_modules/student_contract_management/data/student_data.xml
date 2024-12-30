@@ -1,0 +1,184 @@
+<odoo>
+<data noupdate="1">
+<record id="student_1" model="student">
+<field name="first_name">Emma</field>
+<field name="last_name">Smith</field>
+<field name="full_name">Emma Smith</field>
+<field name="date_of_birth">2000-09-28</field>
+<field name="gender">female</field>
+<field name="departments">social_sciences</field>
+<field name="trimester">5</field>
+<field name="career">history</field>
+<field name="active">True</field>
+<field name="email">emma.smith@example.com</field>
+</record>
+<record id="student_2" model="student">
+<field name="first_name">Oliver</field>
+<field name="last_name">Johnson</field>
+<field name="full_name">Oliver Johnson</field>
+<field name="date_of_birth">2000-05-04</field>
+<field name="gender">other</field>
+<field name="departments">engineering</field>
+<field name="trimester">4</field>
+<field name="career">political_science</field>
+<field name="active">True</field>
+<field name="email">oliver.johnson@example.com</field>
+</record>
+<record id="student_3" model="student">
+<field name="first_name">Liam</field>
+<field name="last_name">Williams</field>
+<field name="full_name">Liam Williams</field>
+<field name="date_of_birth">2000-07-10</field>
+<field name="gender">male</field>
+<field name="departments">engineering</field>
+<field name="trimester">2</field>
+<field name="career">veterinary</field>
+<field name="active">True</field>
+<field name="email">liam.williams@example.com</field>
+</record>
+<record id="student_4" model="student">
+<field name="first_name">Ava</field>
+<field name="last_name">Davis</field>
+<field name="full_name">Ava Davis</field>
+<field name="date_of_birth">2004-06-14</field>
+<field name="gender">other</field>
+<field name="departments">humanities</field>
+<field name="trimester">2</field>
+<field name="career">economics</field>
+<field name="active">True</field>
+<field name="email">ava.davis@example.com</field>
+</record>
+<record id="student_5" model="student">
+<field name="first_name">Lucas</field>
+<field name="last_name">Martinez</field>
+<field name="full_name">Lucas Martinez</field>
+<field name="date_of_birth">2004-11-30</field>
+<field name="gender">male</field>
+<field name="departments">agriculture</field>
+<field name="trimester">2</field>
+<field name="career">economics</field>
+<field name="active">True</field>
+<field name="email">lucas.martinez@example.com</field>
+</record>
+<record id="student_6" model="student">
+<field name="first_name">Mia</field>
+<field name="last_name">Taylor</field>
+<field name="full_name">Mia Taylor</field>
+<field name="date_of_birth">2000-09-22</field>
+<field name="gender">male</field>
+<field name="departments">education</field>
+<field name="trimester">10</field>
+<field name="career">medicine</field>
+<field name="active">True</field>
+<field name="email">mia.taylor@example.com</field>
+</record>
+<record id="student_7" model="student">
+<field name="first_name">Noah</field>
+<field name="last_name">Brown</field>
+<field name="full_name">Noah Brown</field>
+<field name="date_of_birth">2004-03-01</field>
+<field name="gender">male</field>
+<field name="departments">science</field>
+<field name="trimester">12</field>
+<field name="career">computer_science</field>
+<field name="active">True</field>
+<field name="email">noah.brown@example.com</field>
+</record>
+<record id="student_8" model="student">
+<field name="first_name">Isabella</field>
+<field name="last_name">Miller</field>
+<field name="full_name">Isabella Miller</field>
+<field name="date_of_birth">2005-07-27</field>
+<field name="gender">female</field>
+<field name="departments">humanities</field>
+<field name="trimester">4</field>
+<field name="career">primary_education</field>
+<field name="active">True</field>
+<field name="email">isabella.miller@example.com</field>
+</record>
+<record id="student_9" model="student">
+<field name="first_name">Elijah</field>
+<field name="last_name">Wilson</field>
+<field name="full_name">Elijah Wilson</field>
+<field name="date_of_birth">2002-03-08</field>
+<field name="gender">male</field>
+<field name="departments">engineering</field>
+<field name="trimester">3</field>
+<field name="career">civil_engineering</field>
+<field name="active">True</field>
+<field name="email">elijah.wilson@example.com</field>
+</record>
+<record id="student_10" model="student">
+<field name="first_name">Charlotte</field>
+<field name="last_name">Moore</field>
+<field name="full_name">Charlotte Moore</field>
+<field name="date_of_birth">2006-02-03</field>
+<field name="gender">male</field>
+<field name="departments">science</field>
+<field name="trimester">3</field>
+<field name="career">anthropology</field>
+<field name="active">True</field>
+<field name="email">charlotte.moore@example.com</field>
+</record>
+<record id="student_11" model="student">
+<field name="first_name">Amelia</field>
+<field name="last_name">Taylor</field>
+<field name="full_name">Amelia Taylor</field>
+<field name="date_of_birth">2006-05-12</field>
+<field name="gender">other</field>
+<field name="departments">economics</field>
+<field name="trimester">11</field>
+<field name="career">secondary_education</field>
+<field name="active">True</field>
+<field name="email">amelia.taylor@example.com</field>
+</record>
+<record id="student_12" model="student">
+<field name="first_name">James</field>
+<field name="last_name">Anderson</field>
+<field name="full_name">James Anderson</field>
+<field name="date_of_birth">2001-10-24</field>
+<field name="gender">male</field>
+<field name="departments">humanities</field>
+<field name="trimester">5</field>
+<field name="career">fine_arts</field>
+<field name="active">True</field>
+<field name="email">james.anderson@example.com</field>
+</record>
+<record id="student_13" model="student">
+<field name="first_name">Benjamin</field>
+<field name="last_name">Thomas</field>
+<field name="full_name">Benjamin Thomas</field>
+<field name="date_of_birth">2002-05-22</field>
+<field name="gender">male</field>
+<field name="departments">arts</field>
+<field name="trimester">10</field>
+<field name="career">chemistry</field>
+<field name="active">True</field>
+<field name="email">benjamin.thomas@example.com</field>
+</record>
+<record id="student_14" model="student">
+<field name="first_name">Sophia</field>
+<field name="last_name">Jackson</field>
+<field name="full_name">Sophia Jackson</field>
+<field name="date_of_birth">2005-09-19</field>
+<field name="gender">other</field>
+<field name="departments">engineering</field>
+<field name="trimester">12</field>
+<field name="career">music</field>
+<field name="active">True</field>
+<field name="email">sophia.jackson@example.com</field>
+</record>
+<record id="student_15" model="student">
+<field name="first_name">Daniel</field>
+<field name="last_name">White</field>
+<field name="full_name">Daniel White</field>
+<field name="date_of_birth">2003-07-24</field>
+<field name="gender">other</field>
+<field name="departments">social_sciences</field>
+<field name="trimester">11</field>
+<field name="career">medicine</field>
+<field name="active">True</field>
+<field name="email">daniel.white@example.com</field>
+</record>
+</data>
+</odoo>

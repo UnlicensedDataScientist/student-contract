@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Subject Options -->
+        <record id="subject_mathematics" model="university.subject.option">
+            <field name="name">Mathematics</field>
+            <field name="code">MATH101</field>
+        </record>
+        <record id="subject_physics" model="university.subject.option">
+            <field name="name">Physics</field>
+            <field name="code">PHYS101</field>
+        </record>
+        <record id="subject_chemistry" model="university.subject.option">
+            <field name="name">Chemistry</field>
+            <field name="code">CHEM101</field>
+        </record>
+        <record id="subject_biology" model="university.subject.option">
+            <field name="name">Biology</field>
+            <field name="code">BIOL101</field>
+        </record>
+        <record id="subject_history" model="university.subject.option">
+            <field name="name">History</field>
+            <field name="code">HIST101</field>
+        </record>
+        <record id="subject_literature" model="university.subject.option">
+            <field name="name">Literature</field>
+            <field name="code">LIT101</field>
+        </record>
+        <record id="subject_computer_science" model="university.subject.option">
+            <field name="name">Computer Science</field>
+            <field name="code">CS101</field>
+        </record>
+        <record id="subject_engineering" model="university.subject.option">
+            <field name="name">Engineering</field>
+            <field name="code">ENG101</field>
+        </record>
+        <record id="subject_economics" model="university.subject.option">
+            <field name="name">Economics</field>
+            <field name="code">ECON101</field>
+        </record>
+        <record id="subject_business" model="university.subject.option">
+            <field name="name">Business Administration</field>
+            <field name="code">BUS101</field>
+        </record>
+        <record id="subject_law" model="university.subject.option">
+            <field name="name">Law</field>
+            <field name="code">LAW101</field>
+        </record>
+        <record id="subject_philosophy" model="university.subject.option">
+            <field name="name">Philosophy</field>
+            <field name="code">PHIL101</field>
+        </record>
+        <record id="subject_psychology" model="university.subject.option">
+            <field name="name">Psychology</field>
+            <field name="code">PSY101</field>
+        </record>
+        <record id="subject_sociology" model="university.subject.option">
+            <field name="name">Sociology</field>
+            <field name="code">SOC101</field>
+        </record>
+        <record id="subject_music" model="university.subject.option">
+            <field name="name">Music</field>
+            <field name="code">MUS101</field>
+        </record>
+        <record id="subject_art" model="university.subject.option">
+            <field name="name">Art</field>
+            <field name="code">ART101</field>
+        </record>
+        <record id="subject_agriculture" model="university.subject.option">
+            <field name="name">Agriculture</field>
+            <field name="code">AGRI101</field>
+        </record>
+        <record id="subject_forestry" model="university.subject.option">
+            <field name="name">Forestry</field>
+            <field name="code">FOR101</field>
+        </record>
+        <record id="subject_veterinary" model="university.subject.option">
+            <field name="name">Veterinary Science</field>
+            <field name="code">VET101</field>
+        </record>
+    </data>
+</odoo>

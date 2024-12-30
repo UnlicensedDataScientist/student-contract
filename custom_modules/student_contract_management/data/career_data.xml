@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Career: Law -->
+        <record id="career_law" model="university.career">
+            <field name="name">law</field>
+            <field name="department">law</field>
+            <field name="code">LAW-001</field>
+            <field name="duration_years">5</field>
+            <field name="description">A comprehensive program focusing on legal studies and practices.</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Career: Medicine -->
+        <record id="career_medicine" model="university.career">
+            <field name="name">medicine</field>
+            <field name="department">medicine</field>
+            <field name="code">MED-001</field>
+            <field name="duration_years">6</field>
+            <field name="description">A rigorous program preparing students for medical professions.</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Career: Computer Science -->
+        <record id="career_computer_science" model="university.career">
+            <field name="name">computer_science</field>
+            <field name="department">engineering</field>
+            <field name="code">CSE-001</field>
+            <field name="duration_years">4</field>
+            <field name="description">Focuses on software development, algorithms, and computational theories.</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Career: Business Administration -->
+        <record id="career_business_administration" model="university.career">
+            <field name="name">business_administration</field>
+            <field name="department">economics</field>
+            <field name="code">BUS-001</field>
+            <field name="duration_years">4</field>
+            <field name="description">Prepares students for management and leadership roles in organizations.</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Career: Fine Arts -->
+        <record id="career_fine_arts" model="university.career">
+            <field name="name">fine_arts</field>
+            <field name="department">arts</field>
+            <field name="code">ART-001</field>
+            <field name="duration_years">3</field>
+            <field name="description">Encourages creativity and skill development in visual arts.</field>
+            <field name="active">True</field>
+        </record>
+
+        <!-- Career: Veterinary Science -->
+        <record id="career_veterinary" model="university.career">
+            <field name="name">veterinary</field>
+            <field name="department">agriculture</field>
+            <field name="code">VET-001</field>
+            <field name="duration_years">5</field>
+            <field name="description">A program dedicated to the study and care of animals.</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="career_science" model="university.career">
+            <field name="name">physics</field>
+            <field name="department">science</field>
+            <field name="code">PHY-001</field>
+            <field name="duration_years">5</field>
+            <field name="description"></field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="career_engineering" model="university.career">
+            <field name="name">civil_engineering</field>
+            <field name="department">engineering</field>
+            <field name="code">CE-001</field>
+            <field name="duration_years">5</field>
+            <field name="description"></field>
+            <field name="active">True</field>
+        </record>
+
+         <record id="career_arts" model="university.career">
+            <field name="name">fine_arts</field>
+            <field name="department">arts</field>
+            <field name="code">FA-001</field>
+            <field name="duration_years">5</field>
+            <field name="description"></field>
+            <field name="active">True</field>
+        </record>
+
+        
+    </data>
+</odoo>

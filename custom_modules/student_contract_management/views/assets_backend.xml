@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_backend" name="Student Contract Management Backend Assets">
+        <xpath expr="odoo/assets_backend" position="inside">
+            <!-- Incluir Chart.js desde un CDN -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+            <!-- Tu archivo JS personalizado -->
+            <script type="text/javascript" src="/student_contract_management/static/src/js/dashboard_graphs.js"></script>
+
+            <!-- CSS personalizado -->
+            <link rel="stylesheet" href="/student_contract_management/static/src/css/dashboard.css"/>
+        </xpath>
+    </template>
+</odoo>
